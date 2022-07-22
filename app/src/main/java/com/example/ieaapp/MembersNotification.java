@@ -5,6 +5,7 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -24,6 +25,8 @@ public class MembersNotification extends AppCompatActivity {
         memberNotificationRv = findViewById(R.id.member_notification_rv);
         memberNotificationBackBtn = findViewById(R.id.member_notification_back_icon);
 
+        memberNotificationRv.setLayoutManager(new LinearLayoutManager(this));
+
         options = new FirebaseRecyclerOptions.Builder<MemberNotificationModel>()
                 .setQuery(FirebaseDatabase.getInstance().getReference().child("Notification").child(FirebaseAuth.getInstance().getCurrentUser().getEmail().replaceAll("\\.", "%7")), MemberNotificationModel.class)
                 .build();
@@ -40,10 +43,11 @@ public class MembersNotification extends AppCompatActivity {
     }
 
 
- @Override
- public void onStart() {
+    @Override
+    public void onStart() {
         super.onStart();
         memberNotificationAdapter.startListening();
- }
+    }
 
 }
+

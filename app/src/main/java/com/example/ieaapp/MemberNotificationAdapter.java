@@ -1,21 +1,17 @@
 package com.example.ieaapp;
 
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 public class MemberNotificationAdapter extends FirebaseRecyclerAdapter<MemberNotificationModel, MemberNotificationAdapter.MemberNotifcationViewHolder> {
-
 
 
     /**
@@ -38,11 +34,11 @@ public class MemberNotificationAdapter extends FirebaseRecyclerAdapter<MemberNot
     @NonNull
     @Override
     public MemberNotifcationViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.member_notification_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.member_notification_item, parent, false);
         return new MemberNotifcationViewHolder(view);
     }
 
-    class MemberNotifcationViewHolder extends RecyclerView.ViewHolder{
+    class MemberNotifcationViewHolder extends RecyclerView.ViewHolder {
         View memberNotificationItem;
         TextView memberNotificationTitle, memberNotificationContent, memberNotificationDate;
 
@@ -54,6 +50,7 @@ public class MemberNotificationAdapter extends FirebaseRecyclerAdapter<MemberNot
             memberNotificationDate = itemView.findViewById(R.id.member_notification_item_date_tv);
         }
     }
+
     @Override
     public int getItemViewType(int position) {
         return position;

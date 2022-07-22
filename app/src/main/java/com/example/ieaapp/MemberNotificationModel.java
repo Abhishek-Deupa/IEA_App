@@ -3,6 +3,10 @@ package com.example.ieaapp;
 public class MemberNotificationModel {
     String notificationTitle, notificationContent, notificationDate;
 
+    public MemberNotificationModel() {
+
+    }
+
     public MemberNotificationModel(String notificationTitle, String notificationContent, String notificationDate) {
         this.notificationTitle = notificationTitle;
         this.notificationContent = notificationContent;
