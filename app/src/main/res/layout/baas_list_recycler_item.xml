@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="8dp"
+    android:backgroundTint="#F5F5">
+
+        <ImageView
+            android:id="@+id/baas_list_recycler_iv"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/sanjeev_sharma_pic"
+            android:layout_height="match_parent"/>
+
+</androidx.cardview.widget.CardView>

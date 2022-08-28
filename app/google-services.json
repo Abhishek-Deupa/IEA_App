@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1053918944771",
+    "firebase_url": "https://iea-app-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "iea-app",
+    "storage_bucket": "iea-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053918944771:android:84609dc2e17eb96214b836",
+        "android_client_info": {
+          "package_name": "com.example.ieaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053918944771-v96m33cd4jv5334k8cn2qmbdcuboopgt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUwENKULZ3fUfcyERSJx1JySPtlDL96pU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053918944771-v96m33cd4jv5334k8cn2qmbdcuboopgt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

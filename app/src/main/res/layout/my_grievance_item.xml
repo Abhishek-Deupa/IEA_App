@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="#F5F5F5"
+    app:cardCornerRadius="8dp"
+    android:elevation="6dp"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/my_grievances_dept_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Department"
+            app:layout_constraintEnd_toStartOf="@id/my_grievances_status_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="14sp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/my_grievances_status_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Status"
+            android:textSize="12dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/grievance_status_cardview"
+            app:layout_constraintTop_toTopOf="@id/my_grievances_dept_tv"
+            app:layout_constraintBottom_toBottomOf="@id/my_grievances_dept_tv"
+            android:layout_marginEnd="8dp"
+
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/grievance_status_cardview"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintTop_toTopOf="@id/my_grievances_dept_tv"
+            app:layout_constraintBottom_toBottomOf="@id/my_grievances_dept_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp">
+            <TextView
+                android:id="@+id/grievance_status_color_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/my_grievances_desc_tv"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:text="Description of the Grievance"
+            android:textSize="12dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@id/my_grievances_dept_tv"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.cardview.widget.CardView>

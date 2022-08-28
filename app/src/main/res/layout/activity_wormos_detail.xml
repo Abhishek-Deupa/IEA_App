@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Wormos_detail_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/back_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enlarge Your Business"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/Wormos_detail_back_btn"
+            app:layout_constraintTop_toTopOf="@id/Wormos_detail_back_btn"/>
+
+        <ImageView
+            android:id="@+id/Wormos_detail_img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="80dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/wormos_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Wormos_detail_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/inter_semi_bold"
+            android:text="Wormos Pvt Ltd."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Wormos_detail_img" />
+
+        <TextView
+            android:id="@+id/member_product_detail_desc_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/inter_semi_bold"
+            android:text="Description"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Wormos_detail_title_tv"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/Wormos_detail_desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:justificationMode="inter_word"
+            android:text="Wormos is a IT based company which is aiming to make Indian Market Digitalized and Migrate all No-tech Business’s Technical Department to Wormos and Let Wormos Handle their Technical workload and Minimising their Headache and help them to Enlarge their Business."
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/member_product_detail_desc_text" />
+
+        <TextView
+            android:id="@+id/empty_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/Wormos_detail_contact_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Wormos_detail_desc_tv" />
+
+        <TextView
+            android:id="@+id/services_offered_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/inter_semi_bold"
+            android:text="Services Offered"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Wormos_detail_desc_tv"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/services_offered_website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/services_offered_text"
+            android:text="1. Website"/>
+
+        <TextView
+            android:id="@+id/services_offered_website_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:paddingStart="16dp"
+            android:textSize="12dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/services_offered_website"
+            android:text="@string/website_detail"/>
+
+        <TextView
+            android:id="@+id/services_offered_dashboards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/services_offered_website_detail"
+            android:text="2. Dashboards"/>
+
+        <TextView
+            android:id="@+id/services_offered_dashboards_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:paddingStart="16dp"
+            android:textSize="12dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/services_offered_dashboards"
+            android:text="@string/dashboards_detail"/>
+
+        <TextView
+            android:id="@+id/services_offered_mobile_applications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/services_offered_dashboards_detail"
+            android:text="3. Mobile Applications"/>
+
+        <TextView
+            android:id="@+id/services_offered_mobile_applications_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:paddingStart="16dp"
+            android:textSize="12dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/services_offered_mobile_applications"
+            android:text="@string/mobile_applications_detail"/>
+
+        <TextView
+            android:id="@+id/services_offered_creativity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/services_offered_mobile_applications_detail"
+            android:text="4. Creativity"/>
+
+        <TextView
+            android:id="@+id/services_offered_creativity_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:paddingStart="16dp"
+            android:textSize="12dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/services_offered_creativity"
+            android:text="@string/creativity_detail"/>
+
+        <TextView
+            android:id="@+id/services_offered_production"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/services_offered_creativity_detail"
+            android:text="5. Production"/>
+
+        <TextView
+            android:id="@+id/services_offered_production_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:paddingStart="16dp"
+            android:textSize="12dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/services_offered_production"
+            android:text="@string/production_detail"/>
+
+        <TextView
+            android:id="@+id/services_offered_marketing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/services_offered_production_detail"
+            android:text="6. Marketing"/>
+
+        <TextView
+            android:id="@+id/services_offered_marketing_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:paddingStart="16dp"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/empty_text_view"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/services_offered_marketing"
+            android:text="@string/marketing_detail"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Wormos_detail_contact_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/button_style_black"
+            android:backgroundTint="#95ECFF"
+            android:fontFamily="@font/inter_semi_bold"
+            android:text="Contact"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/empty_text_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

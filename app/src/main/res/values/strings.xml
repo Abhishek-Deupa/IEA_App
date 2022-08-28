@@ -1,0 +1,200 @@
+<resources>
+    <string name="app_name">IEA - Industrial Entrepreneurs</string>
+    <string name="explore_us_amp_explore_solutions_for_your_industrial_problems"><![CDATA[Explore Us & Explore Solutions for your Industrial Problems]]></string>
+    <string name="explore_us">Explore Us</string>
+    <string name="request_for_membership">Request For Membership</string>
+    <string name="existing_member">Existing Member</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="renewmembership"><u>Click here to renew your membership</u></string>
+    <string name="register">Register</string>
+    <string name="full_name">Full Name</string>
+    <string name="proceed_to_pay">Proceed To Pay</string>
+    <string name="by_signing_up_you_agree_to_terms_of_service_and_privacy_policy">By Signing up, you agree to our Terms of Services and <u><b>Privacy Policy</b></u>.</string>
+    <string name="get_website_here">Don\'t have a website? Get one <b><u>here</u></b>.</string>
+    <string name="email">Email</string>
+    <string name="number">Contact Number</string>
+    <string name="company_name">Company Name</string>
+    <string name="annual_turnover">Annual Turnover</string>
+    <string name="rs_9_999_yearly_including_gst">Rs. 9,999 / Yearly *including gst*</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="core_team_member">Core Team Members</string>
+    <string name="dummy_text_short">Ipsum Laura travel deuhq guanns jhasha uoptio araem</string>
+    <string name="technical_deparment_head">Technical Department Head</string>
+    <string name="dewansh_gangil">Dewansh Gangil</string>
+    <string name="log_out">Log out</string>
+    <string name="members_directory">Members Directory</string>
+    <string name="wormos_pvt_ltd">Wormos Pvt. Ltd</string>
+    <string name="payment">Payment</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="vision_text">Global Presence of IEA Members\nMembers Growth along with Environment and Social Responsibilities\nEffective Value addition in Businesses of Members\nEffective Value addition in Businesses of Members\nClose and Strong Coordination between Local /State /National Statutory bodies /Authorities and More than 40 Famous National Organizations\nEmpowering Youth through Academia-Industry Bridge</string>
+    <string name="visontext1">Global Presence of IEA Members</string>
+    <string name="visontext2">Members Growth along with Environment and Social Responsibilities</string>
+    <string name="visontext3">Effective Value addition in Businesses of Members</string>
+    <string name="visontext4">Close and Strong Coordination between Local /State /National Statutory bodies /Authorities and More than 40 Famous National Organizations</string>
+    <string name="visontext5">Empowering Youth through Academia-Industry Bridge</string>
+    <string name="benefits">&#8226; Easy Access to Govt. Schemes\n\n&#8226; Industrial Social Activities\n\n&#8226; Cultural Events within Industrial Fraternity\n\n&#8226; Global Industrial Relation\n\n&#8226; Virtual Expo\n\n&#8226; Connect to National/International Industry Associations\n\n&#8226; Instant Digital Catalog\n\n&#8226; Instant Publicity on Social Media\n\n&#8226; Discount on Health and Education Sector\n\n&#8226; Legal Advice and Support\n</string>
+    <string name="website_detail">&#8226; Portfolio Static Site\n&#8226; Dynamic Sites \n&#8226; E-commerce Sites\n</string>
+    <string name="dashboards_detail">&#8226; Customer/Client based dashboard\n&#8226; Business Management Software \n</string>
+    <string name="mobile_applications_detail">&#8226; Android\n&#8226; iOS\n</string>
+    <string name="creativity_detail">&#8226; Graphic Desing\n&#8226; Content Writing\n</string>
+    <string name="production_detail">&#8226; Photography\n&#8226; Videography\n&#8226; Animation\n&#8226;VFX and Editing\n</string>
+    <string name="marketing_detail">&#8226; Advertisement\n&#8226; Digital Marketing\n</string>
+    <string name="abouttext">The Industrial Entrepreneurs Association (IEA) is a multifunctional social networking platform that brings together industrial entrepreneurs, students, youth, women, and individuals of all ages.\nThe Industrial Entrepreneurs Association (IEA) provides an easy-to-use social network that allows entrepreneurs to connect with and volunteer with business mentors all over the world to solve difficulties and establish a viable business model together. It aims to empower innovation and startups.  It is the organisation where Fellows share connections, funds, and opportunities; they collaborate on projects and other issues to provide you with exposure to the global market\'s ever-changing trends and to update your toolkit with cutting-edge skills.\nUnlike other organisations, IEA focuses on the development and expansion of entrepreneurs, start-ups, and businesses at the local, district, and community levels across the country, something that has never been done before, and so sets IEA apart from the others. With our various mentors who continue to make an impact through the power of mentoring to assist small businesses develop, the IEA functions as a link between growing sectors at the district, state, and national levels.</string>
+    <string name="missiontext">Mentored approach for collaborative growth of members: In digitalization, global growth, industrial benchmarking and technology upgradation.\nProject plan preparation, coordination with funding agencies, etc.\nEmpowering youth: Through effective "project based" academia-industry interface system.\nTechnology upgradation support to members.\nBuilding "environmental friendly" ecosystem: Tree Plantation, ZED Implementation, Zero Waste, Etc.</string>
+    <string name="overview">Creating a social platform for entrepreneurs to connect and to grow their businesses.\nCreating a network of local entrepreneurs.\nBuilding capacity by curating and sharing knowledge.\nEmpowering Youth, Innovation and Startups\nCreating an industry-enterprise ecosystem that is both positive and supportive.</string>
+    <string name="forgotpass_description">Enter your associated email address</string>
+
+    <string-array name="paymethod">
+        <item>Manual Transfer Via Cheque</item>
+        <item>Physical Method Via Cash</item>
+    </string-array>
+
+    <string-array name="department">
+        <item>Aerospace Industry</item>
+        <item>Agriculture industry</item>
+        <item>Airlines/Aviation</item>
+        <item>Apparel &amp; Fashion</item>
+        <item>Architecture &amp; Planning</item>
+        <item>Arts &amp; Crafts</item>
+        <item>Aviation &amp; Aerospace</item>
+        <item>Biotechnology</item>
+        <item>Building Materials</item>
+        <item>Business Supplies</item>
+        <item>Chemicals</item>
+        <item>Computer Industry</item>
+        <item>Construction Industry</item>
+        <item>Consumer Goods</item>
+        <item>Cosmetics</item>
+        <item>Design</item>
+        <item>Education Industry</item>
+        <item>Energy Industry</item>
+        <item>Entertainment Industry</item>
+        <item>Environmental Services</item>
+        <item>Facilities Services</item>
+        <item>Food Industry</item>
+        <item>Food Production</item>
+        <item>Government Administration</item>
+        <item>Health care Industry</item>
+        <item>Hospitality Industry</item>
+        <item>Human Resources</item>
+        <item>Import and Export</item>
+        <item>IT Industry</item>
+        <item>Legal Services</item>
+        <item>Logistics &amp; Supply</item>
+        <item>Machinery</item>
+        <item>Manufacturing Industry</item>
+        <item>Marketing &amp; Advertising</item>
+        <item>Medical Devices</item>
+        <item>Mining &amp; Metals</item>
+        <item>News Media Industry</item>
+        <item>Non-Profit Organization Management</item>
+        <item>Packaging</item>
+        <item>Pharmaceutical Industry</item>
+        <item>Plastic Products</item>
+        <item>Professional Training &amp; Coaching</item>
+        <item>Real Estate</item>
+        <item>Telecommunication industry</item>
+        <item>Textiles</item>
+        <item>Tourism</item>
+        <item>Transport Industry</item>
+        <item>Utilities</item>
+        <item>Wholesale</item>
+    </string-array>
+
+    <string-array name="department_search">
+        <item>Clear Selection</item>
+        <item>Aerospace Industry</item>
+        <item>Agriculture industry</item>
+        <item>Airlines/Aviation</item>
+        <item>Apparel &amp; Fashion</item>
+        <item>Architecture &amp; Planning</item>
+        <item>Arts &amp; Crafts</item>
+        <item>Aviation &amp; Aerospace</item>
+        <item>Biotechnology</item>
+        <item>Building Materials</item>
+        <item>Business Supplies</item>
+        <item>Chemicals</item>
+        <item>Computer Industry</item>
+        <item>Construction Industry</item>
+        <item>Consumer Goods</item>
+        <item>Cosmetics</item>
+        <item>Design</item>
+        <item>Education Industry</item>
+        <item>Energy Industry</item>
+        <item>Entertainment Industry</item>
+        <item>Environmental Services</item>
+        <item>Facilities Services</item>
+        <item>Food Industry</item>
+        <item>Food Production</item>
+        <item>Government Administration</item>
+        <item>Health care Industry</item>
+        <item>Hospitality Industry</item>
+        <item>Human Resources</item>
+        <item>Import and Export</item>
+        <item>IT Industry</item>
+        <item>Legal Services</item>
+        <item>Logistics &amp; Supply</item>
+        <item>Machinery</item>
+        <item>Manufacturing Industry</item>
+        <item>Marketing &amp; Advertising</item>
+        <item>Medical Devices</item>
+        <item>Mining &amp; Metals</item>
+        <item>News Media Industry</item>
+        <item>Non-Profit Organization Management</item>
+        <item>Packaging</item>
+        <item>Pharmaceutical Industry</item>
+        <item>Plastic Products</item>
+        <item>Professional Training &amp; Coaching</item>
+        <item>Real Estate</item>
+        <item>Telecommunication industry</item>
+        <item>Textiles</item>
+        <item>Tourism</item>
+        <item>Transport Industry</item>
+        <item>Utilities</item>
+        <item>Wholesale</item>
+    </string-array>
+
+    <string-array name="pricing">
+        <item>Rs. 3,658/Month *including gst*</item>
+        <item>Rs. 6,018/Month *including gst*</item>
+        <item>Rs. 12,980/Month *including gst*</item>
+    </string-array>
+
+    <string-array name="grievance_department">
+        <item>UPSIDA</item>
+        <item>GNIDA</item>
+        <item>NPCL</item>
+        <item>UPPCB</item>
+        <item>UPPCL</item>
+        <item>LABOUR OFFICE</item>
+        <item>DIRECTOR FACTORIES</item>
+        <item>POLICE</item>
+        <item>DISTRICT INDUSTRIES CENTRE</item>
+        <item>DM</item>
+        <item>FOREST DEPARTMENT</item>
+        <item>MEDICAL CENTRE</item>
+        <item>ROADWAYS</item>
+        <item>NOIDA AUTHORITY</item>
+        <item>RAILWAYS</item>
+        <item>CENTRAL MSME</item>
+        <item>BANK</item>
+        <item>YEIDA</item>
+        <item>FIRE</item>
+        <item>GST</item>
+        <item>ESI</item>
+        <item>PF</item>
+        <item>Gov department</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="company_turnover">
+        <item>Below 5cr</item>
+        <item>Between 5cr and 10cr</item>
+        <item>Above 10cr</item>
+    </string-array>
+
+
+</resources>

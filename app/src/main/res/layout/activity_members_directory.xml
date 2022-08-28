@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".MembersDirectory">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/members_directory_back_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="42dp"
+            android:background="@drawable/back_icon"
+            android:backgroundTint="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/members_directory_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="@string/members_directory"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/members_directory_back_button"
+            app:layout_constraintStart_toEndOf="@id/members_directory_back_button"
+            app:layout_constraintTop_toTopOf="@id/members_directory_back_button" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/member_search_outbox"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="53dp"
+            android:background="#F5F5F5"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2.5dp"
+            app:endIconDrawable="@drawable/ic_down_arrow"
+            app:endIconTint="@color/black"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/members_directory_text">
+
+            <AutoCompleteTextView
+                android:id="@+id/member_search_autocomplete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cursorVisible="true"
+                android:fontFamily="@font/inria_sans_regular"
+                android:hint="Industry Type"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textCursorDrawable="@color/black"
+                android:textSize="16sp"
+                app:hintTextColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/member_directory_search_edtTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="53dp"
+            android:cursorVisible="true"
+            android:visibility="gone"
+            android:background="@drawable/edittext_style_white_smaller"
+            app:layout_constraintTop_toBottomOf="@id/members_directory_text"
+            android:padding="12dp"
+            android:paddingTop="14dp"
+            android:layout_marginTop="22dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Enter Member Name"
+            android:textColorHint="@color/different_black"
+            tools:ignore="HardcodedText" />
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/member_directory_filter_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/filter_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/members_directory_text"
+            android:layout_marginTop="24dp"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:visibility="gone"
+    android:id="@+id/member_directory_id_holder"/>
+
+        <TextView
+            android:id="@+id/no_member_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/inria_sans_regular"
+            android:gravity="center"
+            android:text="No Result Found"
+            android:textColor="@color/grey"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/member_directory_filter_icon"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/members_directory_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/member_directory_filter_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

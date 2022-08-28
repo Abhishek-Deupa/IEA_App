@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxWidth="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:id="@+id/endUserChatIV"
+        android:layout_marginTop="9.5dp"
+        android:scaleY="1.7"
+        android:visibility="gone"
+        android:layout_marginStart="8dp"
+        android:layout_gravity="start"
+        android:src="@drawable/sidebar"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/enduserchatCV"
+        app:cardCornerRadius="7dp"
+        android:layout_marginStart="20dp"
+        android:visibility="gone"
+        android:outlineAmbientShadowColor="#335c67"
+        android:outlineSpotShadowColor="#335c67"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="start"
+        android:backgroundTint="#335c67">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/endUserName"
+            android:textColor="@color/white"
+            android:text="Rajnish"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/poppins_semi_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/endUserText"
+            android:textColor="#f5f5f5"
+            android:textSize="15sp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="5dp"
+            android:maxWidth="290dp"
+            android:justificationMode="inter_word"
+            android:gravity="start"
+            android:text="kya haal a=hai bhai kk jhg kjh kjh kjh k kjh kjh  kjh  kjh kjh gaf asdf asdf asdf asdf asfd sdf asdf asfd df"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintTop_toBottomOf="@id/endUserName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="9.5dp"
+        android:id="@+id/userChatIV"
+        android:scaleY="1.7"
+        android:layout_marginEnd="8dp"
+        android:layout_gravity="end"
+        android:src="@drawable/sidebar2"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userchatCV"
+        app:cardCornerRadius="7dp"
+        android:layout_marginEnd="20dp"
+        android:outlineAmbientShadowColor="#a76957"
+        android:outlineSpotShadowColor="#a76957"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="end"
+        android:backgroundTint="#a76957">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#f5f5f5"
+            android:id="@+id/userChatText"
+            android:textSize="15sp"
+            android:padding="12dp"
+            android:maxWidth="290dp"
+            android:justificationMode="inter_word"
+            android:gravity="start"
+            android:text="kya haal a=hai bhai gaf asdf asdf asdf asdf asfd sdf asdf asfd df"
+            android:fontFamily="@font/poppins_regular"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</FrameLayout>

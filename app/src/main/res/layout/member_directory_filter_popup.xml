@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    app:cardCornerRadius="22dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/different_black">
+
+        <TextView
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:id="@+id/contact_the_support_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Search by:"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/member_directory_popup_radio_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_the_support_text"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@id/member_directory_popup_okay_btn">
+
+            <RadioButton
+                android:id="@+id/search_by_product_type_rBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Type"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_regular"
+                android:checked="true"
+                android:buttonTint="@color/white"
+                tools:ignore="HardcodedText" />
+
+            <RadioButton
+                android:id="@+id/search_by_member_name_rBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Member Name"
+                android:fontFamily="@font/poppins_regular"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
+
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:background="@drawable/button_style_white_smaller"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/member_directory_popup_radio_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:layout_marginTop="5dp"
+            android:id="@+id/member_directory_popup_okay_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

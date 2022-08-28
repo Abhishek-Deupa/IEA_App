@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/drawable/edittext_style_membership_fee.xml" value="0.1805" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/drawable/edittext_style_search.xml" value="0.1805" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/drawable/ic_down_arrow.xml" value="0.1805" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_baas.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_baas_member_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_core_member_detail.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_core_team_members.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_event_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_events.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_explore_iea.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_explore_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_explore_us.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_landing_page.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_member_directory_detail.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_member_product_detail.xml" value="0.22592592592592592" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_members_directory.xml" value="0.190625" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_members_notification.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_my_grievances.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_my_refer.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_payment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_privacy_policy.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_refer.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_registration.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_user_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/activity_wormos_detail.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/baas_filter_popup.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/baas_product_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/core_member_contact_popup.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/drop_down_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/member_directory_filter_popup.xml" value="0.22582137899120777" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/member_info_popup.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/member_notification_item.xml" value="0.20854700854700856" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/member_product_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/my_grievance_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/support_contact_popup.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/layout/upcoming_event_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/xml/network_security_config.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/Android Projects/IEA App/app/src/main/res/xml/web_progress.xml" value="0.253125" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/black_boundry.xml" value="0.1" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/button_style.xml" value="0.1075" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/button_style_black.xml" value="0.1075" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/button_style_black_round.xml" value="0.1075" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/button_style_black_smaller.xml" value="0.1075" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/button_style_green_round.xml" value="0.1075" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/button_style_white_smaller.xml" value="0.1075" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/core_team_member_item_background.xml" value="0.1075" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/edittext_outline_white.xml" value="0.1075" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/edittext_style_membership_fee.xml" value="0.1" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/edittext_style_search.xml" value="0.1" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/edittext_style_white_much_smaller.xml" value="0.1075" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/edittext_style_white_smaller.xml" value="0.1075" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/edittext_white_outline.xml" value="0.1075" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/grey_background.xml" value="0.1" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/ic_forward.xml" value="0.163" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/ic_logout.xml" value="0.1" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/round_corner.xml" value="0.1" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/round_corner2.xml" value="0.1" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/drawable/round_corner3.xml" value="0.1" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout-v28/members_directory_item.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_baas.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_baas_detail.xml" value="0.20208333333333334" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_baas_member_profile.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_core_member_detail.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_core_team_members.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_event_details.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_events.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_explore_iea.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_explore_menu.xml" value="0.264" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_explore_us.xml" value="0.264" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_grievance.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_landing_page.xml" value="0.14222972972972972" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_login.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_member_directory_detail.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_members_directory.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_my_grievances.xml" value="0.20208333333333334" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_payment.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_payment_proof.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_refer.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_registration.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/activity_user_profile.xml" value="0.17325102880658436" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/baas_list_item.xml" value="0.21822916666666667" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/baas_list_recycler_item.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/baas_member_profile_item.xml" value="0.21822916666666667" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/baas_member_recycler_item.xml" value="0.21822916666666667" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/button_shape.xml" value="0.21822916666666667" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/confirmation_popup.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/core_member_contact_popup.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/core_team_member_item.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/drop_down_item.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/event_member_item.xml" value="0.21822916666666667" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/join_event_popup.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/member_directory_item.xml" value="0.164453125" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/member_product_item.xml" value="0.21822916666666667" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/members_directory_item.xml" value="0.21822916666666667" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/my_grievance_item.xml" value="0.21822916666666667" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/remove_from_event_popup.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/support_contact_popup.xml" value="0.21927083333333333" />
+        <entry key="..\:/Android_Apps/IEA_App/app/src/main/res/layout/upcoming_event_item.xml" value="0.32734375" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/aaa.xml" value="0.5" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_baas.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_baas_member_profile.xml" value="0.13703703703703704" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_event_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_explore_menu.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_explore_us.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_grievance.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_landing_page.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_member_directory_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_member_notification_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_member_product_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_member_productedit.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_payment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_payment_proof.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_refer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_upload_product.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/activity_user_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/are_you_sure_popup.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/baas_list_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/baas_list_recycler_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/baas_product_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/confirmation_popup.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/image_picker_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/member_product_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/my_grievance_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/support_contact_popup.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/temp.xml" value="0.203125" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/layout/upcoming_event_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/Downloads/IEA App/IEA App/app/src/main/res/xml/provider_paths.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2115" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_baas.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_baas_member_profile.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_chat_session.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_core_team_members.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_event_chat_session.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_event_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_events.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_explore_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_grievance_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_member_directory_detail.xml" value="0.3382226056945643" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_member_notification_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_members_directory.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_membership_renewal.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_registration.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_user_profile.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/activity_wormos_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/baas_filter_popup.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/baas_list_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/end_msg_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/event_member_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/farzi.xml" value="0.203125" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/member_info_popup.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/membershiptype_popup.xml" value="0.203125" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/my_grievance_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/past_event_photo_item.xml" value="0.203125" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/support_contact_popup.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/upcoming_event_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Administrator/StudioProjects/IEA_Appv3/app/src/main/res/layout/user_msg_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/drawable/button_style_green_round.xml" value="0.1295" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/drawable/edittext_style_white_smaller.xml" value="0.212" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1295" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_baas.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_baas_member_profile.xml" value="0.1" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_core_member_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_core_team_members.xml" value="0.2046875" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_event_details.xml" value="0.22" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_events.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_explore_iea.xml" value="0.18" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_explore_menu.xml" value="0.19722222222222222" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_explore_us.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_forgot_password.xml" value="0.25" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_main.xml" value="0.2046875" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_member_directory_detail.xml" value="0.22" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_member_notification_detail.xml" value="0.2046875" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_member_productedit.xml" value="0.25" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_members_directory.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_members_notification.xml" value="0.2046875" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_payment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_refer.xml" value="0.2046875" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_registration.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_user_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/baas_list_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/baas_list_recycler_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/confirmation_popup.xml" value="0.33" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/drop_down_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/event_member_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/member_info_popup.xml" value="0.33" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/member_notification_item.xml" value="0.33" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/member_product_item.xml" value="0.5" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/support_contact_popup.xml" value="0.19722222222222222" />
+        <entry key="..\:/Users/Rajnish Ranjan/AndroidStudioProjects/IEA_App/app/src/main/res/layout/upcoming_event_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/rajni/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_core_member_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/rajni/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_core_team_members.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/rajni/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_explore_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/rajni/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_grievance.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/rajni/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_landing_page.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/rajni/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_member_directory_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/rajni/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_my_grievances.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/rajni/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_payment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/rajni/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_payment_proof.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/rajni/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_registration.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/rajni/AndroidStudioProjects/IEA_App/app/src/main/res/layout/activity_user_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/rajni/AndroidStudioProjects/IEA_App/app/src/main/res/layout/core_team_member_item.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
