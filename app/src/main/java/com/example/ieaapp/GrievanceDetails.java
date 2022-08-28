@@ -2,7 +2,6 @@ package com.example.ieaapp;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,17 +15,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import com.bumptech.glide.Glide;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
 import java.util.Objects;
 
@@ -40,7 +34,6 @@ public class GrievanceDetails extends AppCompatActivity {
     ImageView grievanceDetailsIv;
     ProgressDialog progressDialog;
     FirebaseDatabase grievanceDb;
-    StorageReference storageProfilePicReference = FirebaseStorage.getInstance().getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +50,7 @@ public class GrievanceDetails extends AppCompatActivity {
         grievanceDetailsIv = findViewById(R.id.grievance_details_iv);
         mAuth = FirebaseAuth.getInstance();
         userEmailReplaced = Objects.requireNonNull(Objects.requireNonNull(mAuth.getCurrentUser()).getEmail()).replaceAll("\\.", "%7");
-        grievanceItemRef = FirebaseDatabase.getInstance().getReference(("Unresolved Grievances/" + userEmailReplaced+"/"+grievanceKeyStr));
+        grievanceItemRef = FirebaseDatabase.getInstance().getReference(("Unresolved Grievances/" + userEmailReplaced + "/" + grievanceKeyStr));
 
         if (statusStr.equals("Rejected"))
             grievanceDetailsSubmitBtn.setVisibility(View.VISIBLE);
@@ -73,7 +66,7 @@ public class GrievanceDetails extends AppCompatActivity {
                 if (snapshot.child("purl").exists()) {
 
                     imageUrl = Objects.requireNonNull(snapshot.child("purl").getValue()).toString();
-                    if(!imageUrl.isEmpty()){
+                    if (!imageUrl.isEmpty()) {
                         grievanceDetailsIv.setVisibility(View.VISIBLE);
                         Glide.with(getApplicationContext())
                                 .load(Objects.requireNonNull(snapshot.child("purl").getValue()).toString())
@@ -109,21 +102,19 @@ public class GrievanceDetails extends AppCompatActivity {
             grievanceReference2 = grievanceDb.getReference("Unresolved Grievances").child(Objects.requireNonNull(complainerEmail)
                     .replaceAll("\\.", "%7")).child(Objects.requireNonNull(grievanceKey));
 
-            if (!imageUrl.equals("")){
+            if (!imageUrl.equals("")) {
                 progressDialog.show();
                 GrievanceModel solvedModel = new GrievanceModel(complain, departments, complainerEmail, "Unsolved", subject, imageUrl);
                 grievanceReference2.setValue(solvedModel);
                 grievanceReference.child(grievanceKey).setValue(solvedModel);
 
-                Toast.makeText(GrievanceDetails.this, "We have received your request with id "+grievanceKey, Toast.LENGTH_LONG).show();
-                sendGrievanceNotification(grievanceKey);
             } else {
                 GrievanceModel solvedModel = new GrievanceModel(complain, departments, complainerEmail, "Unsolved", subject, imageUrl);
                 grievanceReference2.setValue(solvedModel);
                 grievanceReference.child(grievanceKey).setValue(solvedModel);
-                Toast.makeText(GrievanceDetails.this, "We have received your request with id "+grievanceKey, Toast.LENGTH_LONG).show();
-                sendGrievanceNotification(grievanceKey);
             }
+            Toast.makeText(GrievanceDetails.this, "We have received your request with id " + grievanceKey, Toast.LENGTH_LONG).show();
+            sendGrievanceNotification(grievanceKey);
         });
     }
 
