@@ -1,16 +1,5 @@
 package com.wormoscorp.ieaapp;
 
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-import androidx.cardview.widget.CardView;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -34,6 +23,17 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
+
 import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -54,17 +54,16 @@ import java.util.UUID;
 
 public class UploadProduct extends AppCompatActivity {
 
+    final FirebaseAuth mAuth = FirebaseAuth.getInstance();
     AppCompatButton productUploadBackBtn;
     ImageView productImg;
-    EditText productName,productDescription,productPrice;
+    EditText productName, productDescription, productPrice;
     Uri resultUri;
     Bitmap imageBitmap;
     CardView saveBtn;
     ActivityResultLauncher<String> mGetImage;
     ProgressDialog productUploadProgressDialog;
-    final FirebaseAuth mAuth =FirebaseAuth.getInstance();
     StorageReference storageProfilePicReference;
-
 
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -72,10 +71,10 @@ public class UploadProduct extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_product);
-        productUploadBackBtn= findViewById(R.id.uploadProduct_back_button);
+        productUploadBackBtn = findViewById(R.id.uploadProduct_back_button);
         productImg = findViewById(R.id.productImg);
         productName = findViewById(R.id.productName);
-        productPrice= findViewById(R.id.productPrice);
+        productPrice = findViewById(R.id.productPrice);
         productDescription = findViewById(R.id.baas_productDescription);
         saveBtn = findViewById(R.id.uploadProductSaveBtn);
         productUploadProgressDialog = new ProgressDialog(this);
@@ -85,7 +84,7 @@ public class UploadProduct extends AppCompatActivity {
 
         productUploadBackBtn.setOnClickListener(view -> finish());
 
-        mGetImage =registerForActivityResult(new ActivityResultContracts.GetContent(), new ActivityResultCallback<Uri>() {
+        mGetImage = registerForActivityResult(new ActivityResultContracts.GetContent(), new ActivityResultCallback<Uri>() {
             @Override
             public void onActivityResult(Uri result) {
                 String destinationUri = new StringBuilder(UUID.randomUUID().toString()).append(".jpg").toString();
@@ -97,8 +96,8 @@ public class UploadProduct extends AppCompatActivity {
 
         productImg.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(UploadProduct.this);
-            LayoutInflater layoutInflater= getLayoutInflater();
-            View pickImgview = layoutInflater.inflate(R.layout.image_picker_item,null);
+            LayoutInflater layoutInflater = getLayoutInflater();
+            View pickImgview = layoutInflater.inflate(R.layout.image_picker_item, null);
             builder.setCancelable(true);
             builder.setView(pickImgview);
             AlertDialog alertDialogImg = builder.create();
@@ -126,9 +125,9 @@ public class UploadProduct extends AppCompatActivity {
             });
             cameraCardView.setOnClickListener(view -> {
                 ImagePicker.with(this)
-                        .crop(5f,6f)
+                        .crop(5f, 6f)
                         .cameraOnly()
-                        .maxResultSize(620, 620)	//Final image resolution will be less than 1080 x 1080(Optional)
+                        .maxResultSize(620, 620)    //Final image resolution will be less than 1080 x 1080(Optional)
                         .start(5);
             });
         });
@@ -140,7 +139,7 @@ public class UploadProduct extends AppCompatActivity {
             } else if (productDescription.getText().toString().isEmpty()) {
                 productDescription.setError("Enter product description");
                 productDescription.requestFocus();
-            } else if (resultUri == null ) {
+            } else if (resultUri == null) {
                 Toast.makeText(this, "Select a product image", Toast.LENGTH_SHORT).show();
                 productImg.requestFocus();
             } else {
@@ -187,14 +186,13 @@ public class UploadProduct extends AppCompatActivity {
     }
 
 
-
     private void uploadProductImage(Uri productImageUri) {
         final String[] productPriceStr = new String[1];
         final String[] userContactNumber = new String[1];
         productUploadProgressDialog.setMessage("Uploading Product");
         productUploadProgressDialog.setCancelable(false);
         productUploadProgressDialog.show();
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Registered Users/" + mAuth.getCurrentUser().getEmail().replaceAll("\\.","%7"));
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Registered Users/" + mAuth.getCurrentUser().getEmail().replaceAll("\\.", "%7"));
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -220,7 +218,7 @@ public class UploadProduct extends AppCompatActivity {
 
                         String productTitleStr = productName.getText().toString();
                         String productDescriptionStr = productDescription.getText().toString();
-                        if(productPrice.getText().toString().isEmpty()){
+                        if (productPrice.getText().toString().isEmpty()) {
                             productPriceStr[0] = "--";
                         } else {
                             productPriceStr[0] = productPrice.getText().toString();
@@ -263,7 +261,8 @@ public class UploadProduct extends AppCompatActivity {
                                 productUploadProgressDialog.dismiss();
                                 Toast.makeText(UploadProduct.this, "Product could not be added", Toast.LENGTH_SHORT).show();
                             }
-                        });;
+                        });
+                        ;
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -271,7 +270,8 @@ public class UploadProduct extends AppCompatActivity {
                         productUploadProgressDialog.dismiss();
                         Toast.makeText(UploadProduct.this, "Product could not be added", Toast.LENGTH_SHORT).show();
                     }
-                });;
+                });
+                ;
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -281,7 +281,8 @@ public class UploadProduct extends AppCompatActivity {
             }
         });
     }
-    public  Bitmap getimageBitmap(Uri uri) throws IOException {
+
+    public Bitmap getimageBitmap(Uri uri) throws IOException {
 
         Bitmap bitmap = null;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
@@ -289,6 +290,6 @@ public class UploadProduct extends AppCompatActivity {
         } else {
             bitmap = MediaStore.Images.Media.getBitmap(UploadProduct.this.getContentResolver(), uri);
         }
-        return  bitmap;
+        return bitmap;
     }
 }

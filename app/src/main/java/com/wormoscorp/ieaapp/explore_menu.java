@@ -2,7 +2,9 @@ package com.wormoscorp.ieaapp;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -10,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -32,23 +35,28 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class explore_menu extends AppCompatActivity {
 
-    FirebaseAuth mAuth;
     final DatabaseReference MemberOfMonthref = FirebaseDatabase.getInstance().getReference("Member of Month");
-    TextView exploreUsername, Memberofmonthname, activeValue, solvedValue, MoMdescription;
+    FirebaseAuth mAuth;
+    TextView exploreUsername, Memberofmonthname, activeValue, solvedValue, MoMdescription, noBtnTV, yesBtnTV, questionTV;
     ImageView userImage;
+    EditText reasonText;
     CircleImageView MemberofmonthImg;
     CardView coreMembersCard, memberDirectoryCard, grievanceCard, contactUs, refer, baasCard, eventsCard, helpImg, postJob;
-    Dialog exploreIeaContactDialog;
-    DatabaseReference databaseReference, solvedReference, unResolvedReference, rejectedReference;
+    Dialog exploreIeaContactDialog, reviewDialog, reasonDialog;
+    DatabaseReference solvedReference, unResolvedReference, rejectedReference;
     StorageReference storageProfilePicReference;
-    AppCompatButton exploreMenuLogoutBtn, memberNotificationIcon;
+    AppCompatButton memberNotificationIcon, sendBtn;
     long allsolvedValue, allProblemValue, allRejectedValue;
     RelativeLayout activeBar, activeVal;
     String userEmail;
@@ -67,6 +75,8 @@ public class explore_menu extends AppCompatActivity {
         contactUs = findViewById(R.id.explore_menu_contact_us_cardView);
         refer = findViewById(R.id.refer);
         exploreIeaContactDialog = new Dialog(this);
+        reviewDialog = new Dialog(this);
+        reasonDialog = new Dialog(this);
         userImage = findViewById(R.id.user_img);
         activeValue = findViewById(R.id.active_value);
         solvedValue = findViewById(R.id.solved_value);
@@ -80,9 +90,12 @@ public class explore_menu extends AppCompatActivity {
         helpImg = findViewById(R.id.helpimg);
 
         mAuth = FirebaseAuth.getInstance();
-        if(mAuth.getCurrentUser()!=null){
+        if (mAuth.getCurrentUser() != null) {
             userEmail = Objects.requireNonNull(mAuth.getCurrentUser()).getEmail();
         }
+
+
+        bugReview();
 
 
         assert userEmail != null;
@@ -98,8 +111,6 @@ public class explore_menu extends AppCompatActivity {
         grievanceCalculator();
 
 
-
-
         final int[] solvedGrievances = {0};
         final int[] activeGrievances = {0};
 
@@ -108,7 +119,7 @@ public class explore_menu extends AppCompatActivity {
         grievanceReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                try{
+                try {
                     Query grievanceQuery = grievanceReference.orderByChild("email").equalTo(mAuth.getCurrentUser().getEmail());
                     grievanceQuery.addValueEventListener(new ValueEventListener() {
                         @Override
@@ -121,7 +132,7 @@ public class explore_menu extends AppCompatActivity {
 
                         }
                     });
-                }catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
 
@@ -254,16 +265,16 @@ public class explore_menu extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void membershipChecker(DatabaseReference databaseReference){
+    public void membershipChecker(DatabaseReference databaseReference) {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                HashMap<String,Object> statusMap = new HashMap<>();
-                statusMap.put("status","blocked");
+                HashMap<String, Object> statusMap = new HashMap<>();
+                statusMap.put("status", "blocked");
                 String startingDate = Objects.requireNonNull(snapshot.child("date_of_membership").getValue()).toString();
-                String expiryDate = UserProfile.yearincrementer(startingDate,365);
+                String expiryDate = UserProfile.yearincrementer(startingDate, 365);
                 int datevalue = UserProfile.dateCompare(expiryDate);
-                if(datevalue == 1){
+                if (datevalue == 1) {
                     databaseReference.updateChildren(statusMap);
                     mAuth.signOut();
                     startActivity(new Intent(explore_menu.this, LandingPage.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
@@ -279,7 +290,7 @@ public class explore_menu extends AppCompatActivity {
         });
     }
 
-    public void grievanceCalculator(){
+    public void grievanceCalculator() {
         rejectedReference = FirebaseDatabase.getInstance().getReference().child("Rejected Grievance").child(mAuth.getCurrentUser().getEmail().replaceAll("\\.", "%7"));
 
         solvedReference = FirebaseDatabase.getInstance().getReference().child("Solved Grievance").child(mAuth.getCurrentUser().getEmail().replaceAll("\\.", "%7"));
@@ -327,4 +338,86 @@ public class explore_menu extends AppCompatActivity {
             }
         });
     }
+
+    public void bugReview() {
+        Date date = Calendar.getInstance().getTime();
+        SimpleDateFormat sp = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault());
+        String todaysDate = sp.format(date);
+        SharedPreferences reviewSP = getApplicationContext().getSharedPreferences("AppReview", Context.MODE_PRIVATE);
+        String nextDate = reviewSP.getString("nextReviewDate", "noData");
+        if (nextDate.equals("noData")) {
+            SharedPreferences.Editor dateEditor = reviewSP.edit();
+            dateEditor.putString("nextReviewDate", UserProfile.yearincrementer(todaysDate, 2));
+            dateEditor.apply();
+        } else {
+            int compareResult = UserProfile.dateCompare(nextDate);
+            if (compareResult == 1) {
+                LayoutInflater inflater = getLayoutInflater();
+                View PopupView = inflater.inflate(R.layout.are_you_sure_popup, null);
+                yesBtnTV = PopupView.findViewById(R.id.yesbtn);
+                noBtnTV = PopupView.findViewById(R.id.nobtn);
+                questionTV = PopupView.findViewById(R.id.comfirmationQuestion);
+                questionTV.setHint("Report a bug!");
+
+                reviewDialog.setContentView(PopupView);
+                reviewDialog.setCancelable(false);
+                reviewDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                reviewDialog.show();
+
+                SharedPreferences.Editor dateEditor = reviewSP.edit();
+                dateEditor.putString("nextReviewDate", UserProfile.yearincrementer(todaysDate, 15));
+                dateEditor.apply();
+
+                noBtnTV.setOnClickListener(view -> {
+                    reviewDialog.dismiss();
+                });
+
+                yesBtnTV.setOnClickListener(view -> {
+                    reviewDialog.dismiss();
+                    View reasonView = inflater.inflate(R.layout.reason, null);
+                    reasonText = reasonView.findViewById(R.id.rejectionReason_text);
+                    sendBtn = reasonView.findViewById(R.id.rejection_btn);
+                    reasonDialog.setContentView(reasonView);
+
+                    reasonDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    reasonDialog.show();
+
+                    sendBtn.setOnClickListener(v -> {
+                        if (reasonText.getText().toString().isEmpty()) {
+                            reasonText.setError("Please explain the bug");
+                            reasonText.requestFocus();
+                        } else {
+                            sendAcceptanceEmail(reasonText.getText().toString());
+                            reasonDialog.dismiss();
+                        }
+                    });
+                });
+
+            }
+        }
+    }
+
+    @SuppressLint("IntentReset")
+    private void sendAcceptanceEmail(String reason) {
+
+        Log.d("email", "sendAcceptanceEmail: ");
+
+        String[] TO = {"hello@wormos.com"};
+        Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+        emailIntent.setData(Uri.parse("mailto:"));
+        emailIntent.setType("text/plain");
+
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "New Bug Report");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, reason);
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(explore_menu.this,
+                    "There is no email client installed.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
 }

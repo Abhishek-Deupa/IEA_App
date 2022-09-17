@@ -1,15 +1,5 @@
 package com.wormoscorp.ieaapp;
 
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-import androidx.cardview.widget.CardView;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -34,6 +24,16 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
 import com.github.dhaval2404.imagepicker.ImagePicker;
@@ -67,17 +67,15 @@ public class memberProductedit extends AppCompatActivity {
     String productKey, productPurlStr;
     DatabaseReference databaseReference, productReference;
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
-    final String ownerEmailConverted = mAuth.getCurrentUser().getEmail().replaceAll("\\.","%7");
+    final String ownerEmailConverted = mAuth.getCurrentUser().getEmail().replaceAll("\\.", "%7");
     StorageReference storageProfilePicReference;
-
-    {
-        storageProfilePicReference = FirebaseStorage.getInstance().getReference();
-    }
-
     Bitmap imageBitmap;
     String productPriceStr, productNameStr, productDescStr;
     Dialog confirmationDialog;
 
+    {
+        storageProfilePicReference = FirebaseStorage.getInstance().getReference();
+    }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -100,24 +98,24 @@ public class memberProductedit extends AppCompatActivity {
         databaseReference.child(productKey).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                try{
+                try {
                     productNameStr = snapshot.child("productTitle").getValue().toString();
                     productPriceStr = snapshot.child("productPrice").getValue().toString();
                     productDescStr = snapshot.child("productDescription").getValue().toString();
                     productPurlStr = snapshot.child("productImageUrl").getValue().toString();
 
                     productName.setText(productNameStr);
-                    productPrice.setText("\u20B9"+productPriceStr);
+                    productPrice.setText("\u20B9" + productPriceStr);
                     productDesc.setText(productDescStr);
-                    if(productImageUri == null){
+                    if (productImageUri == null) {
                         Glide.with(getApplicationContext())
                                 .load(productPurlStr)
                                 .placeholder(R.drawable.iea_logo)
                                 .error(R.drawable.iea_logo)
                                 .into(Productimg);
                     }
-                } catch (Exception e){
-                    Log.e("error", "onDataChange: ",e );
+                } catch (Exception e) {
+                    Log.e("error", "onDataChange: ", e);
                 }
 
             }
@@ -128,7 +126,7 @@ public class memberProductedit extends AppCompatActivity {
             }
         });
 
-        RemoveProductBtn.setOnClickListener(v->{
+        RemoveProductBtn.setOnClickListener(v -> {
             confirmationDialog = new Dialog(memberProductedit.this);
             LayoutInflater inflater = getLayoutInflater();
             View confirmationView = inflater.inflate(R.layout.are_you_sure_popup, null);
@@ -154,23 +152,23 @@ public class memberProductedit extends AppCompatActivity {
                             public void onSuccess(Void unused) {
                                 productReference.removeValue();
                                 confirmationDialog.dismiss();
-                                startActivity(new Intent(memberProductedit.this,BaasMemberProfile.class).putExtra("BaasItemKey",ownerEmailConverted).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                                startActivity(new Intent(memberProductedit.this, BaasMemberProfile.class).putExtra("BaasItemKey", ownerEmailConverted).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                                 finish();
                             }
                         });
 
-                    } catch (Exception e){
-                        Log.d("error", ": "+e);
+                    } catch (Exception e) {
+                        Log.d("error", ": " + e);
                     }
                 }
             });
         });
 
         Addproductbtn.setOnClickListener(v -> {
-            if (productImageUri != null){
-                uploadEditedProduct(productImageUri,databaseReference,productKey);
+            if (productImageUri != null) {
+                uploadEditedProduct(productImageUri, databaseReference, productKey);
             } else {
-                uploadEditedProductStr(productPurlStr,databaseReference,productKey);
+                uploadEditedProductStr(productPurlStr, databaseReference, productKey);
 
             }
         });
@@ -188,8 +186,8 @@ public class memberProductedit extends AppCompatActivity {
 
         Productimg.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(memberProductedit.this);
-            LayoutInflater layoutInflater= getLayoutInflater();
-            View pickImgview = layoutInflater.inflate(R.layout.image_picker_item,null);
+            LayoutInflater layoutInflater = getLayoutInflater();
+            View pickImgview = layoutInflater.inflate(R.layout.image_picker_item, null);
             builder.setCancelable(true);
             builder.setView(pickImgview);
             AlertDialog alertDialogImg = builder.create();
@@ -218,29 +216,29 @@ public class memberProductedit extends AppCompatActivity {
             cameraCardView.setOnClickListener(view1 -> {
                 ImagePicker.with(this)
                         .cameraOnly()
-                        .crop(5f,6f)	    			//Crop image(Optional), Check Customization for more option
-                        .maxResultSize(1080, 1080)	//Final image resolution will be less than 1080 x 1080(Optional)
+                        .crop(5f, 6f)                    //Crop image(Optional), Check Customization for more option
+                        .maxResultSize(1080, 1080)    //Final image resolution will be less than 1080 x 1080(Optional)
                         .start(3);
             });
         });
 
     }
 
-    public void uploadEditedProduct(Uri productUri,DatabaseReference ref,String key){
-        try{
+    public void uploadEditedProduct(Uri productUri, DatabaseReference ref, String key) {
+        try {
 
             ProgressDialog dialog = new ProgressDialog(this);
             dialog.setMessage("Updating...");
             dialog.setCancelable(false);
             dialog.show();
             HashMap<String, Object> productData = new HashMap<>();
-            if(productPrice.getText().toString().isEmpty()){
-                productData.put("productPrice","--");
-            }else {
-                productData.put("productPrice",productPrice.getText().toString().substring(1));
+            if (productPrice.getText().toString().isEmpty()) {
+                productData.put("productPrice", "--");
+            } else {
+                productData.put("productPrice", productPrice.getText().toString().substring(1));
             }
-            productData.put("productTitle",productName.getText().toString());
-            productData.put("productDescription",productDesc.getText().toString());
+            productData.put("productTitle", productName.getText().toString());
+            productData.put("productDescription", productDesc.getText().toString());
             StorageReference productFileRef = storageProfilePicReference.child("Product Images/" + mAuth.getCurrentUser().getEmail() + productName.getText().toString());
             productFileRef.putFile(productUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
@@ -248,18 +246,18 @@ public class memberProductedit extends AppCompatActivity {
                     productFileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
                         public void onSuccess(Uri uri) {
-                            productData.put("productImageUrl",uri.toString());
+                            productData.put("productImageUrl", uri.toString());
                             ref.child(key).updateChildren(productData).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
-                                    if(!productNameStr.equals(productName.getText().toString())){
+                                    if (!productNameStr.equals(productName.getText().toString())) {
                                         StorageReference oldProductImgRef = FirebaseStorage.getInstance().getReferenceFromUrl(productPurlStr);
                                         oldProductImgRef.delete();
                                     }
 //                                    imageBitmap=null;
 //                                    productImageUri =null;
                                     dialog.dismiss();
-                                    startActivity(new Intent(memberProductedit.this,memberProductedit.class).putExtra("EditItemKey",productKey).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                                    startActivity(new Intent(memberProductedit.this, memberProductedit.class).putExtra("EditItemKey", productKey).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                                     Toast.makeText(memberProductedit.this, "Product updated", Toast.LENGTH_SHORT).show();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
@@ -281,20 +279,21 @@ public class memberProductedit extends AppCompatActivity {
                     Toast.makeText(memberProductedit.this, "Product updating failed", Toast.LENGTH_SHORT).show();
                 }
             });
-        } catch (Exception e){
-            Log.e("TAG", "uploadEditedProduct: ",e );
+        } catch (Exception e) {
+            Log.e("TAG", "uploadEditedProduct: ", e);
         }
 
     }
-    public void uploadEditedProductStr(String purlStr,DatabaseReference ref,String key){
+
+    public void uploadEditedProductStr(String purlStr, DatabaseReference ref, String key) {
         HashMap<String, Object> productData = new HashMap<>();
-        if(productPrice.getText().toString().isEmpty()){
-            productData.put("productPrice","--");
-        }else {
-            productData.put("productPrice",productPrice.getText().toString().substring(1));
+        if (productPrice.getText().toString().isEmpty()) {
+            productData.put("productPrice", "--");
+        } else {
+            productData.put("productPrice", productPrice.getText().toString().substring(1));
         }
-        productData.put("productTitle",productName.getText().toString());
-        productData.put("productDescription",productDesc.getText().toString());
+        productData.put("productTitle", productName.getText().toString());
+        productData.put("productDescription", productDesc.getText().toString());
         ref.child(key).updateChildren(productData).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
@@ -314,7 +313,7 @@ public class memberProductedit extends AppCompatActivity {
         if (resultCode == RESULT_OK && requestCode == 2) {
             productImageUri = UCrop.getOutput(data);
             Productimg.setImageURI(productImageUri);
-        }else if (resultCode == RESULT_OK && requestCode == 3) {
+        } else if (resultCode == RESULT_OK && requestCode == 3) {
             productImageUri = data.getData();
             Productimg.setImageURI(productImageUri);
 
@@ -335,8 +334,7 @@ public class memberProductedit extends AppCompatActivity {
     }
 
     private boolean checkStoragePermission() {
-        boolean res2 = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
-        return res2;
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
     }
 
     private boolean checkCameraPermission() {
@@ -344,7 +342,8 @@ public class memberProductedit extends AppCompatActivity {
         boolean res2 = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
         return res1 && res2;
     }
-    public  Bitmap getimageBitmap(Uri uri) throws IOException {
+
+    public Bitmap getimageBitmap(Uri uri) throws IOException {
 
         Bitmap bitmap = null;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
@@ -352,7 +351,7 @@ public class memberProductedit extends AppCompatActivity {
         } else {
             bitmap = MediaStore.Images.Media.getBitmap(memberProductedit.this.getContentResolver(), uri);
         }
-        return  bitmap;
+        return bitmap;
     }
 
 }
